@@ -107,3 +107,41 @@ DxLibの環境構築に必要なのは\[プロジェクトに追加すべきフ�
 ![image08](./image08.png)
 
 以上でプロパティの設定は全て終了です．右下の\[OK\]を押して保存，終了しましょう
+
+### 5. [動かしてみる](http://dxlib.o.oo7.jp/use/dxuse_vs2015express.html#R6)
+この項は本質的には環境構築とは関係ありませんが，これまでの設定が正しくできていることの確認のためにも
+試しておいたほうが良いです  
+  
+先ほどプロパティ設定を行うためにソースファイルを作成したので，そのファイルに以下のプログラムを記入します  
+\(このプログラムは[DxLibのHPに用意されているプログラム](http://dxlib.o.oo7.jp/use/dxuse_vs2015express.html#R6)
+を実行結果が見えやすいように改変したものです\)
+
+```
+#include "DxLib.h"
+
+// プログラムは WinMain から始まります
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+	ChangeWindowMode(TRUE); // ウィンドウモードで起動
+
+	if (DxLib_Init() == -1)		// ＤＸライブラリ初期化処理
+	{
+		return -1;			// エラーが起きたら直ちに終了
+	}
+
+	// DrawPixel(320, 240, GetColor(255, 255, 255));	// 点を打つ
+	DrawCircle(320, 240, 60, GetColor(255, 255, 255), TRUE); // 円を描く
+
+	WaitKey();				// キー入力待ち
+
+	DxLib_End();				// ＤＸライブラリ使用の終了処理
+
+	return 0;				// ソフトの終了 
+}
+```
+
+プログラムが入力できたら，\[デバッグ\]→\[デバッグの開始\]を選択してください  
+コンパイルされ，エラーが起きなければDxLibによってWindowが開かれ白色の丸い円が表示されます  
+![image09](image09.png)
+
+

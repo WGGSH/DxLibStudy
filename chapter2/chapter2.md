@@ -1,6 +1,7 @@
 # 第2章 DxLibで簡単な2Dゲームを作る
 
 # 作成するゲーム
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EGhflLE_yIs" frameborder="0" gesture="media" allowfullscreen></iframe>
 
 # 目次
 1.  [メインループの作成](2-1.md)

@@ -1,6 +1,6 @@
 # 第2章 DxLibで簡単な2Dゲームを作る
 
-# 作成するゲーム
+# 作成するゲーム(クリックするとYoutubeへ)
 [![](http://img.youtube.com/vi/EGhflLE_yIs/0.jpg)](https://www.youtube.com/watch?v=EGhflLE_yIs)
 
 # 目次
